@@ -1,0 +1,50 @@
+<!-- En-tête de la page -->
+<div class="container">
+  <header class="header">
+    <h1>Gestion Rendez-vous</h1>
+    <nav>
+      <a href="#" class="active">Inscription</a>
+      <a href="#">Connexion</a>
+      <a href="#">Rendez-vous</a>
+      <a href="#">Disponibilités</a>
+    </nav>
+  </header>
+
+  <!-- Formulaire d'inscription -->
+  <div class="form-container">
+    <h2>Inscription</h2>
+    <form (submit)="onSubmit($event)">
+      <div class="form-group">
+        <label for="username">Nom d'utilisateur</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Entrez votre nom d'utilisateur"
+          (input)="onInputChange('username', $event)"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Entrez votre email"
+          (input)="onInputChange('email', $event)"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Entrez votre mot de passe"
+          (input)="onInputChange('password', $event)"
+        />
+      </div>
+
+      <button type="submit" class="btn-submit">S'inscrire</button>
+    </form>
+  </div>
+</div>
